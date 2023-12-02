@@ -14,26 +14,31 @@ class _SpalshScreenState extends State<SpalshScreen> {
     super.initState();
 
     // simulate some loading process
-    Future.delayed(const Duration(seconds: 20), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const UserSignUp()));
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => const UserSignUp()));
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       backgroundColor: Colors.deepOrange,
       body: Center(
         child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Image.asset('assets/images/logo.png', width: 200,),
-          const SizedBox(
-            height: 20,
+          Image.asset(
+            'assets/images/logo.png',
+            width: 200,
           ),
           const SizedBox(
             height: 20,
           ),
-           const CircularProgressIndicator(color: Colors.white,),
+          const SizedBox(
+            height: 20,
+          ),
+          const CircularProgressIndicator(
+            color: Colors.white,
+          ),
         ]),
       ),
     );
